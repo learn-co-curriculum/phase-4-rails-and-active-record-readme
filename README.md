@@ -102,17 +102,18 @@ We're telling Rails to generate the code for a Cheese model, with a `name`
 attribute (string, the default data type), `price` (integer), and
 `is_best_seller` (boolean).
 
-You'll see this code added in the `db/migrate` folder:
+You'll see this code added in a `create_cheeses.rb` file the
+`db/migrate` folder:
 
 ```rb
-class CreateCheeses < ActiveRecord::Migration
+class CreateCheeses < ActiveRecord::Migration[6.1]
   def change
     create_table :cheeses do |t|
       t.string :name
       t.integer :price
       t.boolean :is_best_seller
 
-      t.timestamps null: false
+      t.timestamps
     end
   end
 end
@@ -162,9 +163,9 @@ To add some initial data in our database, we can take advantage of the 'seeds' f
 
 ```rb
 # db/seeds.rb
-Cheese.create!(name: "Cheddar", price: 3, is_best_seller: true)
-Cheese.create!(name: "Pepper Jack", price: 4, is_best_seller: true)
-Cheese.create!(name: "Limburger", price: 8, is_best_seller: false)
+Cheese.create!(name: 'Cheddar', price: 3, is_best_seller: true)
+Cheese.create!(name: 'Pepper Jack', price: 4, is_best_seller: true)
+Cheese.create!(name: 'Limburger', price: 8, is_best_seller: false)
 ```
 
 Next, run `rails db:seed` to execute all the code in the `db/seeds.rb` file.
@@ -191,7 +192,7 @@ Cheese.last
 
 With our `Cheese` model working, let's add a new feature that returns a summary
 of a cheese. Exit out of the Rails console with `control + d`. Then add this to
-the model file:
+the Cheese model file:
 
 ```rb
 def summary
@@ -209,7 +210,7 @@ Cheese.last.summary
 > If you didn't exit the Rails console before adding the new Cheese#summary
 > method, you can get the console to reload all your code by running `reload!`.
 
-It should return the summary value of the last cheese we created: `"Cheese: $3"`.
+It should return the summary value of the last cheese we created: `"Cheese: $8"`.
 
 As you may have noticed, we did not have to create a controller, route, view,
 etc. in order to get the `Cheese` model working. The data aspect of the
