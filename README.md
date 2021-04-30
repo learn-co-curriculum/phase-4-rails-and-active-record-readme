@@ -151,7 +151,7 @@ we run `rails db:migrate`. The `db/schema.rb` file is updated with a version
 number corresponding to the timestamp of the last migration you ran. When you
 run `rails db:migrate` again, only migrations whose timestamps are greater than
 the schema's version number will run. So, the numbers at the beginning of the
-filenames of your migrations are required so ActiveRecord can be sure to run
+filenames of your migrations are required so Active Record can be sure to run
 each of your migrations just once and in the proper order.
 
 After running `rails db:migrate` we can see that our `db/schema.rb` file has
