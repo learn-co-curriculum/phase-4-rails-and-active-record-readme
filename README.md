@@ -218,7 +218,7 @@ application can work separately from the view and data flow logic. This level of
 abstraction makes it efficient to test data behavior without having it strongly
 coupled to how it is rendered to the user.
 
-## Summary
+## Conclusion
 
 We covered quite a bit of material in this lesson. You should now have a firm
 understanding of Active Record models in Rails. Active Record is a powerful tool
