@@ -15,6 +15,10 @@ Rails apps.
 Fork and clone this repo, then run `bundle install` to download the required
 dependencies before coding along.
 
+## Video Walkthrough
+
+<iframe width="100%" height="720" src="https://www.youtube.com/embed/AYr7juVVz7g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+
 ## Active Record's Role
 
 Active Record is the built-in ORM that Rails utilizes to manage the model
