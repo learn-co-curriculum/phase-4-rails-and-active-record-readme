@@ -80,11 +80,32 @@ particular, we'll want to know our cheese's _name_, its _price_ in dollars, and
 whether it's a _best seller_. In the database, our `cheeses` should look something
 like this:
 
-| id  | name        | price | is_best_seller |
-| --- | ----------- | ----- | -------------- |
-| 1   | Cheddar     | 3     | true           |
-| 2   | Pepper Jack | 4     | true           |
-| 3   | Limburger   | 8     | false          |
+<table border="1" cellpadding="4" cellspacing="0">
+  <tr>
+    <th>`id`</th>
+    <th>`name`</th>
+    <th>`price`</th>
+    <th>`is_best_seller`</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Cheddar</td>
+    <td>3</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Pepper Jack</td>
+    <td>4</td>
+    <td>true</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Limburger</td>
+    <td>8</td>
+    <td>false</td>
+  </tr>
+</table>
 
 To set this up in our Rails app, we'll need a few things:
 
