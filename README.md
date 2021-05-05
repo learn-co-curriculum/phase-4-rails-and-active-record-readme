@@ -17,7 +17,7 @@ dependencies before coding along.
 
 ## Video Walkthrough
 
-<iframe width="100%" height="720" src="https://www.youtube.com/embed/AYr7juVVz7g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AYr7juVVz7g?rel=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
 
 ## Active Record's Role
 
