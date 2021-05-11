@@ -9,11 +9,14 @@
 ## Introduction
 
 In this code-along, we'll discuss how Active Record fits into a Rails
-application, as well as some tools to make it easier to setup models in your
+application, as well as some tools to make it easier to set up models in your
 Rails apps.
 
 Fork and clone this repo, then run `bundle install` to download the required
 dependencies before coding along.
+
+> **Note:** This code-along has been set up as a Rails app for you, so you will
+> be running all the terminal commands inside the lesson directory.
 
 ## Video Walkthrough
 
@@ -22,11 +25,11 @@ dependencies before coding along.
 ## Active Record's Role
 
 Active Record is the built-in ORM that Rails utilizes to manage the model
-aspects of an application. What is an ORM? An ORM is an Object Relational
-Mapper system &mdash; a module that enables your application to
-manage data in a method driven structure. This means that you are able to run
-queries, add records, and perform all of the traditional database processes by
-leveraging methods as opposed to writing SQL manually. For example, below is the
+aspects of an application. What is an ORM? An ORM is an Object Relational Mapper
+system — a module that enables your application to manage data in a
+method-driven structure. This means that you are able to run queries, add
+records, and perform all of the traditional database processes by leveraging
+methods as opposed to writing SQL manually. For example, below is the
 traditional way that we would query a database of 'cheeses' using SQL:
 
 ```sql
@@ -115,9 +118,11 @@ To set this up in our Rails app, we'll need a few things:
 
 ## Using Rails Generators
 
-Rails gives us an easy way of creating both of these things using a **generator** we can run from the command line.
+Rails gives us an easy way of creating both of these things using a
+**generator** we can run from the command line.
 
-From the project directory, run this command in your terminal:
+Make sure you've navigated into the directory for this lesson, then run this
+command in your terminal:
 
 ```sh
 rails g model Cheese name price:integer is_best_seller:boolean
@@ -127,8 +132,8 @@ We're telling Rails to generate the code for a Cheese model, with a `name`
 attribute (string, the default data type), `price` (integer), and
 `is_best_seller` (boolean).
 
-You'll see this code added in a `create_cheeses.rb` file the
-`db/migrate` folder:
+You'll see this code added in a `create_cheeses.rb` file — the name of the file
+will be prepended with a time stamp — inside the `db/migrate` folder:
 
 ```rb
 class CreateCheeses < ActiveRecord::Migration[6.1]
@@ -195,7 +200,7 @@ Cheese.create!(name: 'Limburger', price: 8, is_best_seller: false)
 
 Next, run `rails db:seed` to execute all the code in the `db/seeds.rb` file.
 
-Let's out our code using the Rails console. Open up the Rails console by running
+Let's test out our code using the Rails console. Open up the console by running
 `rails console` or `rails c`. Running the console will load the entire Rails
 environment and give you command line access to the app and the database. The
 console is a powerful tool that you can leverage in order to test out scripts,
@@ -235,7 +240,8 @@ Cheese.last.summary
 > If you didn't exit the Rails console before adding the new Cheese#summary
 > method, you can get the console to reload all your code by running `reload!`.
 
-It should return the summary value of the last cheese we created: `"Cheese: $8"`.
+It should return the summary value of the last cheese we created: `"Limburger:
+$8"`.
 
 As you may have noticed, we did not have to create a controller, route, view,
 etc. in order to get the `Cheese` model working. The data aspect of the
