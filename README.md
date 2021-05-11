@@ -220,6 +220,13 @@ created in the seed file! You can test out some other methods here as well:
 Cheese.last
 ```
 
+Recall that Active Record also allows us to use method chaining to access the
+attributes we've defined for our Cheese model:
+
+```rb
+Cheese.last.name
+```
+
 With our `Cheese` model working, let's add a new feature that returns a summary
 of a cheese. Exit out of the Rails console with `control + d`. Then add this to
 the Cheese model file:
