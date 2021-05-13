@@ -125,12 +125,22 @@ Make sure you've navigated into the directory for this lesson, then run this
 command in your terminal:
 
 ```sh
-rails g model Cheese name price:integer is_best_seller:boolean
+rails g model Cheese name price:integer is_best_seller:boolean --no-test-framework
 ```
 
 We're telling Rails to generate the code for a Cheese model, with a `name`
 attribute (string, the default data type), `price` (integer), and
 `is_best_seller` (boolean).
+
+> **IMPORTANT**: Note that we have added the `no-test-framework` argument to our
+`rails g` command. **You should add this argument to every Rails generator
+command you run while you're working in the Flatiron curriculum.** Without this
+flag, the Rails generator will automatically create spec files that can
+interfere with the lab tests. If you forget to add the `--no-test-framework`
+argument, you will have to comb through your local repo and manually delete all
+of the newly-created, unnecessary tests. This is not fun!
+
+**Please, remember the `--no-test-framework` argument.**
 
 You'll see this code added in a `create_cheeses.rb` file — the name of the file
 will be prepended with a time stamp — inside the `db/migrate` folder:
