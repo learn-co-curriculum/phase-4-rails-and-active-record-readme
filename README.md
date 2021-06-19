@@ -242,6 +242,8 @@ of a cheese. Exit out of the Rails console with `control + d`. Then add this to
 the Cheese model file:
 
 ```rb
+# app/models/cheese.rb
+
 def summary
   "#{self.name}: $#{self.price}"
 end
@@ -263,8 +265,8 @@ $8"`.
 As you may have noticed, we did not have to create a controller, route, view,
 etc. in order to get the `Cheese` model working. The data aspect of the
 application can work separately from the view and data flow logic. This level of
-abstraction makes it efficient to test data behavior without having it strongly
-coupled to how it is rendered to the user.
+abstraction makes it possible to test the behavior of our models without 
+having them strongly coupled to how they are rendered to the user.
 
 ## Conclusion
 
