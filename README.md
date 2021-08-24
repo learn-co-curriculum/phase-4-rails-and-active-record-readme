@@ -83,11 +83,11 @@ particular, we'll want to know our cheese's _name_, its _price_ in dollars, and
 whether it's a _best seller_. In the database, our `cheeses` should look something
 like this:
 
-| `id` | `name` | `price` | `is_best_seller` |
-| --- | --- | --- | --- |
-| 1 | Cheddar | 3 | true |
-| 2 | Pepper Jack | 4 | true |
-| 3 | Limburger | 8 | false |
+| `id` | `name`      | `price` | `is_best_seller` |
+| ---- | ----------- | ------- | ---------------- |
+| 1    | Cheddar     | 3       | true             |
+| 2    | Pepper Jack | 4       | true             |
+| 3    | Limburger   | 8       | false            |
 
 To set this up in our Rails app, we'll need a few things:
 
@@ -103,8 +103,8 @@ Rails gives us an easy way of creating both of these things using a
 Make sure you've navigated into the directory for this lesson, then run this
 command in your terminal:
 
-```sh
-rails g model Cheese name price:integer is_best_seller:boolean --no-test-framework
+```console
+$ rails g model Cheese name price:integer is_best_seller:boolean --no-test-framework
 ```
 
 We're telling Rails to generate the code for a Cheese model, with a `name`
@@ -153,8 +153,8 @@ create this table for us and generate a schema file.
 
 Run the migration by running:
 
-```sh
-rails db:migrate
+```console
+$ rails db:migrate
 ```
 
 For a refresher on migrations, see [this documentation][migrations]. This
@@ -238,13 +238,12 @@ Cheese.last.summary
 > If you didn't exit the Rails console before adding the new Cheese#summary
 > method, you can get the console to reload all your code by running `reload!`.
 
-It should return the summary value of the last cheese we created: `"Limburger:
-$8"`.
+It should return the summary value of the last cheese we created: `"Limburger: $8"`.
 
 As you may have noticed, we did not have to create a controller, route, view,
 etc. in order to get the `Cheese` model working. The data aspect of the
 application can work separately from the view and data flow logic. This level of
-abstraction makes it possible to test the behavior of our models without 
+abstraction makes it possible to test the behavior of our models without
 having them strongly coupled to how they are rendered to the user.
 
 ## Conclusion
