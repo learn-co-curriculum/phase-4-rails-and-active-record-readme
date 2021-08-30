@@ -202,8 +202,8 @@ our new Cheese model:
 Cheese.all
 ```
 
-If everything is set up properly, you will see that it all the cheeses we
-created in the seed file! You can test out some other methods here as well:
+If everything is set up properly, you will see that it returns all the cheeses
+we created in the seed file! You can test out some other methods here as well:
 
 ```rb
 Cheese.last
@@ -228,8 +228,7 @@ def summary
 end
 ```
 
-You can test this out in this new method in the Rails console by running
-a query on the record we created, such as:
+Go ahead test this new method out in the Rails console by running a query on one of our records, for example:
 
 ```rb
 Cheese.last.summary
