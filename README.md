@@ -228,7 +228,8 @@ def summary
 end
 ```
 
-Go ahead test this new method out in the Rails console by running a query on one of our records, for example:
+Go ahead and test this new method out in the Rails console by running a query on
+one of our records, for example:
 
 ```rb
 Cheese.last.summary
