@@ -254,6 +254,15 @@ that enables developers to focus on the logic of their applications while
 streamlining processes such as connecting to the database, running queries, and
 much more.
 
+## Check For Understanding
+
+Before you move on, make sure you can answer the following questions:
+
+1. What are some of the ways that using Active Record in Rails makes it easier
+   to interact with model data stored in a database?
+2. What are the advantages of using a Rails generator to create our models?
+3. Why is it important for migration file names to have a timestamp prepended?
+
 [scopes]: http://api.rubyonrails.org/classes/ActiveRecord/Scoping/Named/ClassMethods.html
 [validations]: http://api.rubyonrails.org/classes/ActiveModel/Validations/ClassMethods.html
 [relationships]: http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html
