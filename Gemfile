@@ -1,12 +1,15 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
+# Add logger gem for Ruby 3.3 compatibility
+gem 'logger'
+
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 2.7'
+gem 'sqlite3', '~> 1.6.0'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use Active Model has_secure_password
